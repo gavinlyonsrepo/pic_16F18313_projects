@@ -1,9 +1,9 @@
 
 Overview
 --------------------------------------------
-* Name: LCD_LM35
+* Name: LM35_LCD16X02_4bit
 * Description: A program to read an LM35 temperature sensor and display it on an 
-HD44780 16X2 LCD, with a PIC 12F675.
+HD44780 16X2 LCD, with a PIC 16F18313.
 * Author: Gavin Lyons.
 
 Table of contents
@@ -65,5 +65,4 @@ Pins 7 to 14 are data lines (D0-D7). Data transfer to and from the display can b
 Schematic
 ------------------------
 
-TODO
-
+![Schematic PIC](https://github.com/gavinlyonsrepo/pic_16F18313_projects/blob/master/images/LCD_LM35_4bit.png)

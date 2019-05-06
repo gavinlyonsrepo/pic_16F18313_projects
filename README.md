@@ -6,7 +6,7 @@ Overview
 --------------------------------------------
 * Name: pic_16F18313_projects
 * Description: A set of projects  for a PIC 16F18313 Microcontroller,
-written in C(xc8).
+written in C(xc8), 8-pin 8-bit.
 * Author: Gavin Lyons
 
 Table of contents
