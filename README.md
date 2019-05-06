@@ -5,8 +5,8 @@
 Overview
 --------------------------------------------
 * Name: pic_16F18313_projects
-* Description: A set of projects and example code for a PIC 16F18313 Microcontroller,
-written in C and Assembly.
+* Description: A set of projects  for a PIC 16F18313 Microcontroller,
+written in C(xc8).
 * Author: Gavin Lyons
 
 Table of contents
@@ -21,19 +21,17 @@ Table of contents
 
 Project List
 -----------------------------------------
-A set of projects and example code for the PIC 16F18313 8-pin 8-bit Microcontroller,
-in C and Assembly.
-Each Project/example has a short Readme.md , eagle schematic image and source code file
-in the relevant sub-folder. All projects in C code unless stated that they are written in 
-Assembly.
+A set of projects for the PIC 16F18313 8-pin 8-bit Microcontroller,
+in C(xc8). Each Project has a short Readme.md , eagle schematic image and source code files
+in the relevant sub-folder. 
 
 **Project list:**
 
 | Num | Desc | Link |
 | --- | --- | --- |
-| 1  | Dummy |[URL](projects/emergency_lights_c) |
+| 1  | LM35 on HD44780 LCD 16x02 lib (4 bit-mode, shift reg, 3 GPIO) |[URL](projects/LM35_LCD16X02_4bit) |
 | 2  | ------------ | ------------- |
-
+| 3  | ------------ | ------------- |
 
 Communication
 -----------
