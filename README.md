@@ -1,11 +1,9 @@
 
 
-![PIC](https://github.com/gavinlyonsrepo/pic_16F18313_projects/blob/master/images/pic16F18313.jpg)
-
 Overview
 --------------------------------------------
 * Name: pic_16F18313_projects
-* Description: A set of projects  for a PIC 16F18313 Microcontroller,
+* Description: A set of projects for the PIC 16F18313 Microcontroller,
 written in C(xc8), 8-pin 8-bit.
 * Author: Gavin Lyons
 
@@ -30,8 +28,9 @@ in the relevant sub-folder.
 | Num | Desc | Link |
 | --- | --- | --- |
 | 1  | LM35 on HD44780 LCD 16x02 lib (4 bit-mode, shift reg, 3 GPIO) |[URL](projects/LM35_LCD16X02_4bit) |
-| 2  | ------------ | ------------- |
+| 2  | CountDown timer using TM1637 module | [URL](projects/countdown_timer) |
 | 3  | ------------ | ------------- |
+| 4  | ------------ | ------------- |
 
 Communication
 -----------
