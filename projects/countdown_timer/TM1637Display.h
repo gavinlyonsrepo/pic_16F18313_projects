@@ -4,7 +4,7 @@
 * Description: header file library TM1637  4 digit seven segment module 3462BS
 * Author: Gavin Lyons.
 * Complier: xc8 v2.05 compiler
-* PIC: PIC16F1619 
+* PIC: PIC16F18313 
 * IDE:  MPLAB X v5.05
 * Development board: Microchip Curiosity Board, PIC16F1619
 * Created May 2019
