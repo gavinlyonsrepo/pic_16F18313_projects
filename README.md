@@ -29,7 +29,7 @@ in the relevant sub-folder.
 | --- | --- | --- |
 | 1  | LM35 on HD44780 LCD 16x02 lib (4 bit-mode, shift reg, 3 GPIO) |[URL](projects/LM35_LCD16X02_4bit) |
 | 2  | CountDown timer using TM1637 module | [URL](projects/countdown_timer) |
-| 3  | ------------ | ------------- |
+| 3  | Battery tester with 3118BHS bargraph module | [URL](projects/bargraph) |
 | 4  | ------------ | ------------- |
 
 Communication
