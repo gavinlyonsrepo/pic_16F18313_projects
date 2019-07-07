@@ -13,7 +13,7 @@
 #include "mcc_generated_files/mcc.h"
 
 /* ======== Defines   ======== */
-#define ADCRES 0.003274682 // ADC  per volt = 3.35/1023, vcc/adc , 
+#define ADCRES 0.00331 // ADC  per volt = 3.39/1023, vcc/adc ,
 #define SCLK_DELAY 500 //delay in uS for shift reg clock
 #define RCLK_DELAY 500 //delay in uS for shift reg latch
 

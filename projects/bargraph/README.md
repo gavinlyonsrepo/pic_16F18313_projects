@@ -52,10 +52,34 @@ for rechargeable and off for non-rechargeable to indicate mode.
 A shift register drives the LED 3118BHG module which has six outputs LEDs.
 The more LED's the higher battery level.
 The battery under test is connected to RA4 and is read using the ADC. 
-The software currently assumes a Pic VCC of 3.35 this can be changed 
+The software currently assumes a Pic VCC of 3.39 this can be changed 
 by changing a define. The data is fed to module LSB and because the 3118BHG
 is common cathode it is flipped i.e. zero for LED on one for off.
-See code for the voltage ranges applied to bargraph for both modes.
+Voltage ranges applied to bargraph for both modes:
+
+Rechargeable mode 
+
+| Voltage range  | LEDs on  | 
+| --- | --- |
+| 0 - 0.5 |  None |
+| 0.5 - 0.9 | One red |
+| 0.9 - 1.0 | Two red |
+| 1.0 - 1.1 | Three red |
+| 1.1 - 1.2 | Four red |
+| 1.2 - 1.35 | Five red |
+| > 1.35  | Five red + green |
+
+Non-Rechargeable mode 
+
+| Voltage range  | LED on  | 
+| --- | --- |
+| 0 - 0.8 |  None |
+| 0.8 - 1.0 | One red |
+| 1.0 - 1.2 | Two red |
+| 1.2 - 1.3 | Three red |
+| 1.3 - 1.4 | Four red |
+| 1.4 - 1.55 | Five red |
+| > 1.55 | Five red + green |
 
 ![ PIC ](https://github.com/gavinlyonsrepo/pic_16F18313_projects/blob/master/images/bargraph.jpg)
 
