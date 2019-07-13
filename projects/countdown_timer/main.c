@@ -5,8 +5,7 @@
 * Author: Gavin Lyons.
 * Complier: xc8 v2.05 compiler
 * PIC: PIC16F18313
-* IDE:  MPLAB X v5.05
-* Development board: Microchip Curiosity Board, PIC16F1619
+* IDE:  MPLAB X v5.05 
 * Created May 2019
 */
  
@@ -61,7 +60,7 @@ void Setup(void)
     INTERRUPT_PeripheralInterruptEnable();
     TMR0_StopTimer();
     TMR2_StopTimer();
-    setBrightness(0x0C, true);
+    setBrightness(0x04 true);
     BUZZER_RA5_SetLow();
 }
 
