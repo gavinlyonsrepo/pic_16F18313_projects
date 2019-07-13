@@ -60,7 +60,7 @@ void Setup(void)
     INTERRUPT_PeripheralInterruptEnable();
     TMR0_StopTimer();
     TMR2_StopTimer();
-    setBrightness(0x04 true);
+    setBrightness(0x04, true);
     BUZZER_RA5_SetLow();
 }
 
