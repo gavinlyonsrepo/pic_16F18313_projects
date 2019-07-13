@@ -47,6 +47,10 @@ The pot is connected to RA4 and is read using the ADC. The push button to RA2
 is read on a hardware interrupt. Timer0 is used to keep time. Timer2 is used
 to run a PWM signal out of  RA5 to drive the output passive buzzer.
 
+The Unit current consumption is 25mA. 
+This can be reduced to ~11mA  by setting the brightness setting lower to 0x02.
+
+
 Schematic
 ------------------------
 
