@@ -4,7 +4,7 @@
 * Description: header file library TM1637  4 digit seven segment module 3462BS
 * Author: Gavin Lyons.
 * Complier: xc8 v2.05 compiler
-* PIC: PIC16F18313 
+* PIC: PIC16F1619 
 * IDE:  MPLAB X v5.05
 * Development board: Microchip Curiosity Board, PIC16F1619
 * Created May 2019
@@ -26,13 +26,6 @@
 
 uint8_t m_brightness;
     
-  //! Initialize a TM1637Display object, setting the clock and
-  //! data pins.
-  //!
-  //! @param pinClk - The number of the digital pin connected to the clock pin of the module
-  //! @param pinDIO - The number of the digital pin connected to the DIO pin of the module
-void   TM1637Display(void);
-
   //! Sets the brightness of the display.
   //!
   //! The setting takes effect when a command is given to change the data being

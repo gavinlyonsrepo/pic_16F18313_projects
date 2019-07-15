@@ -94,10 +94,6 @@ void PIN_MANAGER_Initialize(void)
     INTPPS = 0x02;   //RA2->EXT_INT:INT;    
     RA5PPS = 0x02;   //RA5->PWM5:PWM5;    
 }
-  
-void PIN_MANAGER_IOC(void)
-{   
-}
 
 /**
  End of File

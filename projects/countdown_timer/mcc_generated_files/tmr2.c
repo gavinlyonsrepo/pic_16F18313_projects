@@ -88,37 +88,6 @@ void TMR2_StopTimer(void)
     T2CONbits.TMR2ON = 0;
 }
 
-uint8_t TMR2_ReadTimer(void)
-{
-    uint8_t readVal;
-
-    readVal = TMR2;
-
-    return readVal;
-}
-
-void TMR2_WriteTimer(uint8_t timerVal)
-{
-    // Write to the Timer2 register
-    TMR2 = timerVal;
-}
-
-void TMR2_LoadPeriodRegister(uint8_t periodVal)
-{
-   PR2 = periodVal;
-}
-
-bool TMR2_HasOverflowOccured(void)
-{
-    // check if  overflow has occurred by checking the TMRIF bit
-    bool status = PIR1bits.TMR2IF;
-    if(status)
-    {
-        // Clearing IF flag.
-        PIR1bits.TMR2IF = 0;
-    }
-    return status;
-}
 /**
   End of File
 */
