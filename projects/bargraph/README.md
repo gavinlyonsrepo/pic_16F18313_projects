@@ -46,6 +46,8 @@ shift register to 3118BHG module
 
 The system makes a new reading every two seconds on timer0 overflow interrupt.
 Two modes defined by switch position.
+On power on, a routine displays a moving pattern on bar-graph for a few seconds, when bar-graph goes blank
+unit is ready for test.
 The SPDT switch on RA3 is read, if it is logic high the unit is set to measure rechargeable,
 if set to logic low, non-rechargeable AA/AAA batteries. The status LED(red) is turned on 
 for rechargeable and off for non-rechargeable to indicate mode.

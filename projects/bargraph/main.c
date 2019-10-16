@@ -1,10 +1,10 @@
 
 /* ====== Header =======
- * File: main.c 
+ * File: Battery level tester output to bargraph
  * Author: Gavin Lyons
  * IDE: MPLAB X v5.05
  * Compiler: xc8 v2.05
- * Description: Battery level tester output to bargraph see URL for full details.
+ * Description: see URL for full details.
  * URL: https://github.com/gavinlyonsrepo/pic_16F18313_projects
  * Created on 01 June 2019
  */
@@ -13,12 +13,13 @@
 #include "mcc_generated_files/mcc.h"
 
 /* ======== Defines   ======== */
-#define ADCRES 0.00331 // ADC  per volt = 3.39/1023, vcc/adc ,
-#define SCLK_DELAY 500 //delay in uS for shift reg clock
+#define ADCRES 0.00331 // ADC  per volt = 3.39/1023, vcc/adc , 
+#define SCLK_DELAY 50 //delay in uS for shift reg clock
 #define RCLK_DELAY 500 //delay in uS for shift reg latch
+#define INIT_DISPLAY_DELAY 500 //delay in mS during start-up routine
 
 /* ======= Globals========*/
-bool mode = false; //true for non-recharge, false for recharge
+bool mode = false; //true for non-recharge, false for rechargeable(default)
 
 /* ==== Function prototypes ===== */
 void Setup(void);
@@ -27,6 +28,7 @@ void rclock(void);
 void DataDisplay(uint8_t);
 void ParseValue(uint16_t );
 void ReadSwitch(void);
+void DataDisplayInit(void);
 
 
 /* ====== Main loop ======= */
@@ -34,6 +36,12 @@ void main(void)
 {
     uint16_t ADC_value= 0;
     Setup();
+    // First ADC pass and init delay and display, Found that ADC 
+    // gave superious results on first pass and needed a delay.
+    ADC_value=ADC_GetConversion(BATIN_ANA4)>>6; 
+    ADC_value= 0;
+    DataDisplayInit();
+    
     while (1)
     {
         if (count == true) // count set to true by timer0 every ~two seconds
@@ -61,8 +69,6 @@ void Setup(void)
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
     ReadSwitch();
-    DataDisplay(0xFF);
-    __delay_ms(50);
 }
 
 //Parses data from ADC and calls DisplayData to set LED bargraph
@@ -152,4 +158,22 @@ void ReadSwitch(void)
     }
         
 }
+
+// start-up routine displays a pattern on bar-graph
+void DataDisplayInit(void)
+{
+    char LEDControlInit[8] = {0xFF, 0xFD, 0xFB, 0xF7, 0xEF, 0xDF};
+    for (uint8_t i=0 ; i<5 ; i++)
+    {
+        DataDisplay(LEDControlInit[i]);
+        __delay_ms(INIT_DISPLAY_DELAY);
+    }
+    for (uint8_t i=5 ; i>0 ; i--)
+    {
+        DataDisplay(LEDControlInit[i]);
+        __delay_ms(INIT_DISPLAY_DELAY);
+    }
+    DataDisplay(LEDControlInit[0]);
+}
+
 /* ==== End of File  ===== */

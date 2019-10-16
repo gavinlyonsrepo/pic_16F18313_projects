@@ -84,39 +84,6 @@ void TMR0_Initialize(void)
     T0CON0 = 0x80;
 }
 
-void TMR0_StartTimer(void)
-{
-    // Start the Timer by writing to TMR0ON bit
-    T0CON0bits.T0EN = 1;
-}
-
-void TMR0_StopTimer(void)
-{
-    // Stop the Timer by writing to TMR0ON bit
-    T0CON0bits.T0EN = 0;
-}
-
-uint8_t TMR0_ReadTimer(void)
-{
-    uint8_t readVal;
-
-    // read Timer0, low register only
-    readVal = TMR0L;
-
-    return readVal;
-}
-
-void TMR0_WriteTimer(uint8_t timerVal)
-{
-    // Write to Timer0 registers, low register only
-    TMR0L = timerVal;
- }
-
-void TMR0_Reload(uint8_t periodVal)
-{
-   // Write to Timer0 registers, high register only
-   TMR0H = periodVal;
-}
 
 void TMR0_ISR(void)
 {
