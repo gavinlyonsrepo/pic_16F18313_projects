@@ -56,7 +56,7 @@ The more LED's the higher battery level.
 The battery under test is connected to RA4 and is read using the ADC. 
 The software currently assumes a Pic VCC of 3.39 this can be changed 
 by changing a define. The data is fed to module LSB and because the 3118BHG
-is common cathode it is flipped i.e. zero for LED on one for off.
+is common anode it is flipped i.e. zero for LED on, one for LED off.
 Voltage ranges applied to bargraph for both modes:
 
 Rechargeable mode 
