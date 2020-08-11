@@ -25,7 +25,7 @@ GPIO function on PIC
 | Heartbeat LED  | RA5 |
 | Status LED | RA2 |
 | Reset pushbutton | RA3 |
-| RELAY module signal | RA4 |
+| Servo signal | RA4 |
 | TRIGGER HC SR04  | RA1 |
 | ECHO  HC SR04| RA0 |
 
