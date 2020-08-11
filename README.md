@@ -27,6 +27,6 @@ in the relevant sub-folder.
 | 2  | CountDown timer using TM1637 module | [URL](projects/countdown_timer) |
 | 3  | Battery tester with 3118BHG bargraph module | [URL](projects/bargraph) |
 | 4  | Ultrasonic hand sanitiser using HC-SR04 output to relay | [URL](projects/ultrarelay) |
-| 5  | Ultrasonic hand sanitiser using HC-SR04 output to servo |  | [URL](projects/ultraservo) |
+| 5  | Ultrasonic hand sanitiser using HC-SR04 output to servo | [URL](projects/ultraservo) |
 | 6  | ------------ | ------------- |
 

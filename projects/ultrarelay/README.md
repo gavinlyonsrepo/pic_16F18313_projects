@@ -16,7 +16,7 @@ Features
 ----------------------
 A program to monitor an ultra sonic sensor HC-SR04 if a target is seen 
 A relay module is switched on , uses  a PIC 16F18313.
-
+There is another [version](https://github.com/gavinlyonsrepo/pic_16F18313_projects) of this program which uses a servo.
 GPIO function on PIC
 
 | Function  | 16F18313 pin |
@@ -24,7 +24,7 @@ GPIO function on PIC
 | Heartbeat LED  | RA5 |
 | Status LED | RA2 |
 | Reset pushbutton | RA3 |
-| RELAY module signal | RA2 |
+| RELAY module signal | RA4 |
 | TRIGGER HC SR04  | RA1 |
 | ECHO  HC SR04| RA0 |
 
