@@ -3,14 +3,7 @@ Overview
 --------------------------------------------
 * Name: Ultra sonic Servo
 * Description: A program to monitor an ultra sonic sensor HC-SR04, if a target is seen 
-A servo is moved , uses  a PIC 16F18313. Can be used as basis for automated hand sanitiser
-* Author: Gavin Lyons.
-
-Table of contents
----------------------------
-
-  * [Overview](#overview)
-  * [Features](#features)
+A servo is moved , uses  a PIC 16F18313. Can be used as basis for an automated hand sanitiser dispenser system 
 
 Features
 ----------------------
@@ -36,11 +29,11 @@ It needs to be reset every minute by software.
 
 **HC SR-04**
 
-The HC-SR04 is an ultrasonic sensor which can be used to measure distance anywhere between 2cm to 450cm. The transmitter emits an US wave at a frequency of 40Hz, this wave travels through the air and gets reflected back when it senses an object. The returning waves are observed by the receiver. Now we know the time taken for this wave to get reflected and come back and the speed of the US wave is also universal (3400cm/s). Using this information and the below high school formulae we can calculate the distance covered. We trigger the sensor then measure the echo. We use timer 1 to calculate size of pulse.
+The HC-SR04 is an ultrasonic sensor which can be used to measure distance anywhere between 2cm to 450cm. The transmitter emits an US wave at a frequency of 40Hz, this wave travels through the air and gets reflected back when it senses an object. The returning waves are observed by the receiver. Now we know the time taken for this wave to get reflected and come back and the speed of the US wave is also universal (3400cm/s). Using this information  we can calculate the distance covered. We trigger the sensor then measure the echo. We use timer 1 16-bit register to calculate size of pulse.
 
 Time = (16-bit register value) * (1/Internal Clock) * (Pre-scale), Internal Clock = Fosc/4,
-Where in our case, Fosc = 12000000Mhz and clock divider = 4,
-Hence the value of Internal Clock will be 4000000Mhz and the value of time will be:
+Where in our case, Fosc = 12Mhz and clock divider = 4,
+Hence the value of Internal Clock will be 3Mhz and the value of time will be:
 
 1. Time = (16-bit register value) * (1/3000000) * (4)
 2. Time  = (16-bit register value) * (4/3000000)
@@ -51,7 +44,7 @@ Next we have to find how to calculate the distance. As we know distance = speed 
 
 1. Distance = (Speed*Time)/2
 2. Distance  = (34000 * (16-bit register value) * 0.000001.333) /2
-3. Distance = (0.0453 * 16-bit register value)/2
+3. Distance in cm = (0.0453 * 16-bit register value)/2
 
 
 ![ PIC ](https://github.com/gavinlyonsrepo/pic_16F18313_projects/blob/master/images/hcsr04.jpg)
@@ -61,7 +54,7 @@ Next we have to find how to calculate the distance. As we know distance = speed 
 
 If target is detected the servo is moved for a period.
 Max duty cycle ~10% is issued for "closed" postion.
-Min duty cycle ~5%is issued for "open" postion. 
+Min duty cycle ~5% is issued for "open" postion. 
 From the data sheet , we see these servos expects a frequency of 50 Hz 
 on the control line and the position it moves to depends on the pulse width of the signal.
 50Hz gives a period of 20mS (Freq = 1/Period).

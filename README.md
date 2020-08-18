@@ -26,7 +26,7 @@ in the relevant sub-folder.
 | 1  |  HD44780 LCD 16x02 library (4 bit-mode, shift reg, 3 GPIO) displaying LM35 sensor data |[URL](projects/LM35_LCD16X02_4bit) |
 | 2  | CountDown timer using TM1637 module | [URL](projects/countdown_timer) |
 | 3  | Battery tester with 3118BHG bargraph module | [URL](projects/bargraph) |
-| 4  | Ultrasonic hand sanitiser using HC-SR04 output to relay | [URL](projects/ultrarelay) |
-| 5  | Ultrasonic hand sanitiser using HC-SR04 output to servo | [URL](projects/ultraservo) |
-| 6  | ------------ | ------------- |
+| 4  | Automated hand sanitiser dispenser using Ultrasonic sensor HC-SR04, output to relay | [URL](projects/ultrarelay) |
+| 5  | Automated hand sanitiser dispenser using Ultrasonic sensor HC-SR04, output to servo | [URL](projects/ultraservo) |
+
 

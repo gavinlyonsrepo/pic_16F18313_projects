@@ -3,14 +3,8 @@ Overview
 --------------------------------------------
 * Name: Ultra sonic relay
 * Description: A program to monitor an ultra sonic sensor HC-SR04, if a target is seen 
-A relay module is switched on , uses  a PIC 16F18313. Can be used as basis for automated hand sanitiser
+A relay module is switched on , uses  a PIC 16F18313. Can be used as basis for an automated hand sanitiser dispenser system 
 * Author: Gavin Lyons.
-
-Table of contents
----------------------------
-
-  * [Overview](#overview)
-  * [Features](#features)
 
 Features
 ----------------------
@@ -35,7 +29,7 @@ It needs to be reset every minute by software.
 
 **HC SR-04**
 
-The HC-SR04 is an ultrasonic sensor which can be used to measure distance anywhere between 2cm to 450cm. The transmitter emits an US wave at a frequency of 40Hz, this wave travels through the air and gets reflected back when it senses an object. The returning waves are observed by the receiver. Now we know the time taken for this wave to get reflected and come back and the speed of the US wave is also universal (3400cm/s). Using this information and the below high school formulae we can calculate the distance covered. We trigger the sensor then measure the echo. We use timer 1 for this.
+The HC-SR04 is an ultrasonic sensor which can be used to measure distance anywhere between 2cm to 450cm. The transmitter emits an US wave at a frequency of 40Hz, this wave travels through the air and gets reflected back when it senses an object. The returning waves are observed by the receiver. Now we know the time taken for this wave to get reflected and come back and the speed of the US wave is also universal (3400cm/s). Using this information e can calculate the distance covered. We trigger the sensor then measure the echo. We use timer1 16-bit register for this.
 
 Time = (16-bit register value) * (1/Internal Clock) * (Pre-scale), Internal Clock = Fosc/4,
 Where in our case, Fosc = 16000000Mhz and Pre-scale = 4,
@@ -50,7 +44,7 @@ Next we have to find how to calculate the distance. As we know distance = speed 
 
 1. Distance = (Speed*Time)/2
 2. Distance  = (34000 * (16-bit register value) * 0.000001) /2
-3. Distance = (0.034 * 16-bit register value)/2
+3. Distance in cm = (0.034 * 16-bit register value)/2
 
 
 ![ PIC ](https://github.com/gavinlyonsrepo/pic_16F18313_projects/blob/master/images/hcsr04.jpg)

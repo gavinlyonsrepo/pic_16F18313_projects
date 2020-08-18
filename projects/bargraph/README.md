@@ -7,17 +7,10 @@ battery level indicator bar-graph LED display 3118BHG module
 using  a PIC 16F18313.
 * Author: Gavin Lyons.
 
-Table of contents
----------------------------
-
-  * [Overview](#overview)
-  * [Features](#features)
-
-
 Features
 ----------------------
 
-A program display AA/AAA battery level on a 
+A program to display AA/AAA battery level on a 
 battery level indicator bar-graph LED display 3118BHG module 
 using a PIC 16F18313.
 
@@ -42,7 +35,6 @@ shift register to 3118BHG module
 | D | pin 4 QE |
 | E | pin 3 QD|
 | F | pin 2 QC |
-
 
 The system makes a new reading every two seconds on timer0 overflow interrupt.
 Two modes defined by switch position.

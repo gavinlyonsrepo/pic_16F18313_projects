@@ -6,13 +6,6 @@ Overview
 and display result on TM1637 based LED segment module with a PIC 16F18313.
 * Author: Gavin Lyons.
 
-Table of contents
----------------------------
-
-  * [Overview](#overview)
-  * [Features](#features)
-
-
 Features
 ----------------------
 
