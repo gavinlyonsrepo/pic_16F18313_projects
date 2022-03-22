@@ -3,7 +3,7 @@ Overview
 --------------------------------------------
 * Name: Ultra sonic Servo
 * Description: A program to monitor an ultra sonic sensor HC-SR04, if a target is seen 
-A servo is moved , uses  a PIC 16F18313. Can be used as basis for an automated hand sanitiser dispenser system 
+A servo is moved , uses  a PIC 16F18313. A version which controls a relay instead of a servo is also in projects folder at this repository 
 
 Features
 ----------------------
