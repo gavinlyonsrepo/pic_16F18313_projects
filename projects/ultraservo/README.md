@@ -9,7 +9,7 @@ Features
 ----------------------
 A program to monitor an ultra sonic sensor HC-SR04 if a target is seen 
 A servo is moved , uses  a PIC 16F18313. 
-There is another [version](https://github.com/gavinlyonsrepo/pic_16F18313_projects) of this program which uses a relay.
+There is another in projects folder of this program which uses a relay instead of servo.
 
 GPIO function on PIC
 
